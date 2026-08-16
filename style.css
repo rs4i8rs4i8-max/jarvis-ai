@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #0a0a0a;
+    color: #00ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.jarvis-container {
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+.jarvis-holo-ring {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    border: 4px solid rgba(0,255,255,0.8);
+    box-shadow: 0 0 40px rgba(0,255,255,0.5), inset 0 0 40px rgba(0,255,255,0.3);
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 40px rgba(0,255,255,0.5), inset 0 0 40px rgba(0,255,255,0.3); }
+    50% { box-shadow: 0 0 60px rgba(0,255,255,0.7), inset 0 0 60px rgba(0,255,255,0.5); }
+    100% { box-shadow: 0 0 40px rgba(0,255,255,0.5), inset 0 0 40px rgba(0,255,255,0.3); }
+}
+
+.jarvis-title {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+    text-shadow: 0 0 20px rgba(0,255,255,0.6);
+}
+
+.jarvis-subtitle {
+    font-size: 1.2rem;
+    color: #80ffff;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.status-panel {
+    background: rgba(0,255,255,0.1);
+    border: 1px solid rgba(0,255,255,0.3);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(0,255,255,0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.message {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.user-message {
+    color: #ffffff;
+    text-align: right;
+}
+
+.jarvis-message {
+    color: #00ffcc;
+    text-align: left;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 1px solid rgba(0,255,255,0.3);
+    border-radius: 8px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    outline: none;
+}
+
+#user-input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 15px rgba(0,255,255,0.4);
+}
+
+#send-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00ffff, #00ccff);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,255,255,0.5);
+}
